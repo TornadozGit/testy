@@ -2,10 +2,12 @@ import { loadComponent, initDarkMode, activateSidebar, initTableSearch } from '.
 import { initDashboardCharts } from '../charts/dashboardCharts.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-  if (document.getElementById('header')) loadComponent('header', '/components/header.html');
-  if (document.getElementById('sidebar')) loadComponent('sidebar', '/components/sidebar.html');
-  if (document.getElementById('footer')) loadComponent('footer', '/components/footer.html');
-  if (document.getElementById('modalPlaceholder')) loadComponent('modalPlaceholder', '/components/modal.html');
+  const base = location.pathname.includes('/pages/') ? '..' : '.';
+
+  if (document.getElementById('header')) loadComponent('header', `${base}/components/header.html`);
+  if (document.getElementById('sidebar')) loadComponent('sidebar', `${base}/components/sidebar.html`);
+  if (document.getElementById('footer')) loadComponent('footer', `${base}/components/footer.html`);
+  if (document.getElementById('modalPlaceholder')) loadComponent('modalPlaceholder', `${base}/components/modal.html`);
 
   initDarkMode();
   activateSidebar();

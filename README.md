@@ -14,3 +14,5 @@ This project provides a lightweight admin dashboard inspired by the [Mazer Admin
 ## Usage
 
 Open any HTML page in a browser. An internet connection is required to load CDN assets. Pages dynamically load the common components and include a dark mode toggle, responsive navigation, and sample widgets. Charts are rendered with Chart.js modules and the Users table includes live search filtering.
+
+Component files are loaded relative to the page path. If you open a file from the `pages/` directory, the script automatically resolves the correct component location, so no server setup is needed.
