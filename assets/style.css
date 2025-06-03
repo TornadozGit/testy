@@ -10,6 +10,10 @@ body {
   min-height: 100vh;
 }
 
+.theme-dark #sidebar {
+  background-color: #1e1e1e !important;
+}
+
 #sidebar .nav-link.active {
   font-weight: 600;
 }
@@ -23,4 +27,7 @@ body {
 }
 .theme-dark a {
   color: #e1e1e1;
+}
+.theme-dark .card {
+  background-color: #1e1e1e;
 }
